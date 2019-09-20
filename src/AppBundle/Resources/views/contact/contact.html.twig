@@ -1,0 +1,125 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+<table>
+			<caption>Réserver votre place pour le prochain cours de Yoga du rire !</caption>
+			<thead>
+				<tr>
+					<th colspan="3">Yoga du rire avec Jacqueline (Paris)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>05 Janvier 2016</td>
+					<td>15h30</td>
+					<td><a href="#">Réserver ce créneau</a></td>
+				</tr>
+				<tr>
+					<td>10 Janvier 2016</td>
+					<td>16h30</td>
+					<td><a href="#">Réserver ce créneau</a></td>
+				</tr>
+				<tr>
+					<td>15 Janvier 2016</td>
+					<td>15h30</td>
+					<td><a href="#">Réserver ce créneau</a></td>
+				</tr>
+				<tr>
+					<td>20 Janvier 2016</td>
+					<td>16h30</td>
+					<td><a href="#">Réserver ce créneau</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<thead>
+				<tr>
+					<th colspan="3">Yoga du rire avec Roger (Marseille)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>05 Janvier 2016</td>
+					<td>15h30</td>
+					<td><a href="#">Réserver ce créneau</a></td>
+				</tr>
+				<tr>
+					<td>10 Janvier 2016</td>
+					<td>16h30</td>
+					<td><a href="#">Réserver ce créneau</a></td>
+				</tr>
+				<tr>
+					<td>15 Janvier 2016</td>
+					<td>15h30</td>
+					<td><a href="#">Réserver ce créneau</a></td>
+				</tr>
+				<tr>
+					<td>20 Janvier 2016</td>
+					<td>16h30</td>
+					<td><a href="#">Réserver ce créneau</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<section id="info">
+			<h2>Pour valider votre réservation, compléter ce formulaire :</h2>
+			<form method=post action={{path('contact')}}>
+				<fieldset>
+					<legend>Vos coordonnées</legend>
+					<ul>
+						<li>
+							<label for="prenom">Votre prénom :</label>
+							<input type="text" name="prenom" id="prenom">
+						</li>
+						<li>
+							<label for="nom">Votre nom :</label>
+							<input type="text" name="nom" id="nom">
+						</li>
+						<li>
+							<label for="mail">Votre mail :</label>
+							<input type="text" name="mail" id="mail">
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Quelles sont les raisons de votre venue ?</legend>
+					<ul>
+						<li>
+							<label for="detente">Besoin de me détendre</label>
+							<input type="checkbox" id="detente">
+						</li>
+						<li>
+							<label for="medecin">Mon médecin m'a conseillé de venir</label>
+							<input type="checkbox" id="medecin">
+						</li>
+						<li>
+							<label for="ami">Je veux tester avec des amis</label>
+							<input type="checkbox" id="ami">
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Voulez-vous souscrire à notre programme de fidélité ?</legend>
+					<ul>
+						<li>
+							<label for="yes">Oui</label>
+							<input type="radio" name="subscribe" id="yes">
+						</li>
+						<li>
+							<label for="no">Non</label>
+							<input type="radio" name="subscribe" id="no">
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Comment avez-vous connu Ila Yoga ?</legend>
+					<select name="reputation" id="reputation">
+						<option value="internet">Par internet</option>
+						<option value="ami">Par bouche à oreille</option>
+						<option value="pub">Par publicité</option>
+						<option value="other">Autre</option>
+					</select>
+				</fieldset>
+				<button type="submit">Envoyer</button>
+			</form>
+		</section>
+        {% endblock %}
